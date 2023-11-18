@@ -1,4 +1,4 @@
-﻿string path = @$"./{args[0]}";
+string path = @$"./{args[0]}";
 string[] rawcode = File.ReadAllLines(path);
 //parsing
 List<string> rawcommands = new List<string>();   
@@ -82,9 +82,6 @@ while (active)
             case "MOD":
                 acc %= intwheel[0];
                 break;
-            case "SET":
-                acc = intwheel[0];
-                break;
             case "OUT":
                 Console.WriteLine(acc);
                 break;
@@ -148,6 +145,16 @@ while (active)
                             acc = tomove;
                             break;
 
+                    }
+                }
+                if (code[pointer].Length > 3 && (code[pointer].Substring(0, 3) == "UJP" || (code[pointer].Substring(0, 3) == "JMP" && test==true)))
+                {
+                    string[] parts = code[pointer].Split(' ');
+                    string mark = "#"+parts[1];
+                    while (mark != code[pointer])
+                    {
+                        pointer++;
+                        if (pointer == code.Length) pointer = 0;
                     }
                 }
                 break;
