@@ -8,16 +8,4 @@ stackwheel is an esoteric programming language made in 1 hour 15 minutes (the ti
   <th>commands</th>
   <th>purpose</th>
   </tr>
-  <tr>
-  <td>>2></td>
-  <td>this will rotate the second layer by 1 slot. you can replace the "2" with a "3" and the "<"'s with ">" and the command will change layer or direction</td>
-  </tr>
-    <tr>
-  <td>ADD, SUB, MUL, DIV, MOD</td>
-  <td>these will perform the corresponding operation  on the acc and the selected item in layer 2 (selected being always the first, the rotate commands will simply shift the whole wheel over) and store the value in acc. The operations are, respectively, addition, subtraction, multiplication, division and modulo.</td>
-  </tr>
-    <tr>
-  <td>>2></td>
-  <td>this will rotate the second layer by 1 slot. you can replace the "2" with a "3" and the "<"'s with ">" and the command will change layer or direction</td>
-  </tr>
 </table>
